@@ -1,1 +1,1 @@
-require("./packages/config/jest-setup.js");
+require('./packages/config/jest-setup.js');

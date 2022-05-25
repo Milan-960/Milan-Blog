@@ -8,25 +8,25 @@
     <loc>https://comet-land-blog.vercel.app/bar</loc>
   </url>
   <url>
-    <loc>https://comet-land-blog.vercel.app/foo</loc>
-  </url>
-  <url>
-    <loc>https://comet-land-blog.vercel.app/how-to-start</loc>
-  </url>
-  <url>
-    <loc>https://comet-land-blog.vercel.app/kbar-support</loc>
+    <loc>https://comet-land-blog.vercel.app/demo</loc>
   </url>
   <url>
     <loc>https://comet-land-blog.vercel.app/markdown</loc>
+  </url>
+  <url>
+    <loc>https://comet-land-blog.vercel.app/react</loc>
   </url>
 
   <url>
     <loc>https://comet-land-blog.vercel.app/Bar</loc>
   </url>
   <url>
-    <loc>https://comet-land-blog.vercel.app/Foo</loc>
+    <loc>https://comet-land-blog.vercel.app/Demo</loc>
   </url>
   <url>
     <loc>https://comet-land-blog.vercel.app/Guide</loc>
+  </url>
+  <url>
+    <loc>https://comet-land-blog.vercel.app/React</loc>
   </url>
 </urlset>

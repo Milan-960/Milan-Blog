@@ -1,20 +1,7 @@
-## 시작하기 전에
-
-`apps/blog/_config/index.json` 파일의 값이 채워져있는 지 확인해주세요.
-
-## 콘텐츠 추가하는 방법
-
-`apps/blog/_content` 디렉토리에 콘텐츠를 추가하시면 됩니다.
-
-`apps/blogs/_content/category/postname.md` 이런 포맷으로요!
-
-마크다운 작성법은 아래에서 확인하실 수 있습니다.
-
-````markdown
 ---
-title: 'Markdown Examples'
+title: 'Reactjs'
 subtitle: 'example for writing markdown'
-date: 2022-03-01 17:50:00
+date: 2020-03-01 17:50:00
 category: 'Guide'
 ---
 
@@ -48,7 +35,7 @@ _This is italic text_
 >
 > This is **awesome**.
 >
-> — hyesungoh
+> — Milan Sachani
 
 ## Lists
 
@@ -151,4 +138,3 @@ A note[^1]
 
 - [ ] to do
 - [x] done
-````

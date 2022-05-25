@@ -1,5 +1,5 @@
 import { openExternalLink } from '../../utils';
-import { facebookUrl, githubUrl, instagramUrl, linkedInUrl, twitterUrl } from '../SocialMedia';
+import { facebookUrl, githubUrl, stackoverflowUrl, instagramUrl, linkedInUrl, twitterUrl } from '../SocialMedia';
 import { IconActionType } from './type';
 
 function isValid(value: unknown) {
@@ -32,6 +32,17 @@ pushActionWhenValid(githubUrl, {
   perform: () => openExternalLink(githubUrl),
 });
 
+pushActionWhenValid(stackoverflowUrl, {
+  id: 'stackoverflowUrl',
+  name: 'Stackoverflow',
+  subtitle: getSocialMediaId(stackoverflowUrl),
+  section: 'Social',
+  shortcut: [],
+  keywords: 'dm, meta, contact, social media',
+  icon: 'Stackoverflow',
+  perform: () => openExternalLink(stackoverflowUrl),
+});
+
 pushActionWhenValid(instagramUrl, {
   id: 'instagram',
   name: 'Instagram',
@@ -43,16 +54,16 @@ pushActionWhenValid(instagramUrl, {
   perform: () => openExternalLink(instagramUrl),
 });
 
-pushActionWhenValid(facebookUrl, {
-  id: 'facebook',
-  name: 'Facebook',
-  subtitle: getSocialMediaId(facebookUrl),
-  section: 'Social',
-  shortcut: [],
-  keywords: 'dm, meta, contact, social media',
-  icon: 'Facebook',
-  perform: () => openExternalLink(facebookUrl),
-});
+// pushActionWhenValid(facebookUrl, {
+//   id: 'facebook',
+//   name: 'Facebook',
+//   subtitle: getSocialMediaId(facebookUrl),
+//   section: 'Social',
+//   shortcut: [],
+//   keywords: 'dm, meta, contact, social media',
+//   icon: 'Facebook',
+//   perform: () => openExternalLink(facebookUrl),
+// });
 
 pushActionWhenValid(linkedInUrl, {
   id: 'linkedin',

@@ -17,11 +17,10 @@ function AuthorSection({ marginBottom = '3.5rem', hasKbarButton = false }: Props
         <Avatar src={authorImage.default.src} alt={authorName} text={authorName} size="xl" />
         <TextWrapper>
           <H2>
-            Personal blog by{' '}
+            Personal blog by {''}
             <Link href={defaultUrl} target="_blank" rel="noreferrer" color="primary">
               {authorName}
             </Link>
-            .
           </H2>
           <p>{blogDescription}</p>
         </TextWrapper>

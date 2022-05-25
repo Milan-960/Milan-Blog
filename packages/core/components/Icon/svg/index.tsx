@@ -3,6 +3,7 @@ import { ChevronRight } from './ChevronRight';
 import { Email } from './Email';
 import { Facebook } from './Facebook';
 import { Github } from './Github';
+import { Stackoverflow } from './StackoverFlow';
 import { GithubLine } from './GithubLine';
 import { Info } from './Info';
 import { Instagram } from './Instagram';
@@ -19,6 +20,7 @@ export const svg = {
   Email,
   Facebook,
   Github,
+  Stackoverflow,
   GithubLine,
   Info,
   Instagram,
