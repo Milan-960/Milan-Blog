@@ -35,7 +35,7 @@ const Header = styled.header`
 
 const H1 = styled(Text)`
   margin: 0;
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 6rem;
 
   @media ${config.media.xsMax} {
