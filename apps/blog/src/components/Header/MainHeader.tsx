@@ -30,7 +30,7 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 0.875rem;
+  margin-bottom: 2.875rem;
 `;
 
 const H1 = styled(Text)`
