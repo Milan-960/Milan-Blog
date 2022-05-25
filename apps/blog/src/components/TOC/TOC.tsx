@@ -91,7 +91,6 @@ const Div = styled.div`
   position: absolute;
   padding-top: 0;
   width: 280px;
-
   overflow: hidden;
   top: 0;
   left: calc(100% + 2.25rem);

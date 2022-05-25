@@ -45,4 +45,5 @@ const Small = styled.small<{ theme: NextUITheme | undefined }>`
 const P = styled.p`
   width: 100%;
   margin: 0;
+  letter-spacing: 0.02rem;
 `;

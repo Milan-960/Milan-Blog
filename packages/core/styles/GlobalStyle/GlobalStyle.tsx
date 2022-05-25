@@ -10,7 +10,7 @@ const globalStyle = css`
   }
 
   html {
-    font-size: 16px;
+    font-size: 17px;
     word-break: keep-all;
     word-wrap: break-word;
     -webkit-text-size-adjust: 100%;

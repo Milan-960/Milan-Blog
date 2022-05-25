@@ -55,6 +55,7 @@ const TextWrapper = styled.div`
     margin: 0;
     font-size: 1rem;
     line-height: 1.5rem;
+    letter-spacing: 0.02rem;
   }
 `;
 
