@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://comet-land-blog.vercel.app</loc>
+    <loc>https://blog.milansachani.dev/</loc>
   </url>
 
   <url>
-    <loc>https://comet-land-blog.vercel.app/react</loc>
+    <loc>https://blog.milansachani.dev//blogs</loc>
   </url>
 
   <url>
-    <loc>https://comet-land-blog.vercel.app/React</loc>
+    <loc>https://blog.milansachani.dev//Blog</loc>
   </url>
 </urlset>

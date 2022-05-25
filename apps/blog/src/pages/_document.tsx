@@ -15,17 +15,19 @@ export default class BlogDocument extends Document {
         <Head>
           {/* for NextUI */}
           {CssBaseline.flush()}
-
+          <title>Milan Sachani Blog</title>
           <link rel="icon" href={favicon.default.src} />
           <meta httpEquiv="Content-type" content="text/html; charset=utf-8" />
-          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <meta httpEquiv="x-ua-compatible" content="personal website" />
           <meta name="robots" content="index,follow" />
           <meta name="language" content="english" />
+          <meta name="author" content="Milan Sachani" />
           <meta name="revisit-after" content="1 days" />
           <meta property="og:type" content="blog" />
           <meta property="og:locale" content="ko_KR" />
           <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-          <meta name="keywords" content="blog,development,developer,frontend" />
+          <link rel="canonical" href="https://blog.milansachani.dev" />
+          <meta name="keywords" content="blog, development, developer, frontend" />
           <meta name="twitter:creator" content={authorName} />
 
           {/* for google analytics */}
