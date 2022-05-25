@@ -29,7 +29,7 @@ export default class BlogDocument extends Document {
           <meta name="twitter:creator" content={authorName} />
 
           {/* for google analytics */}
-          {/* {isValid(blogGAID) && (
+          {isValid(blogGAID) && (
             <>
               <script async src={`https://www.googletagmanager.com/gtag/js?id=${blogGAID}`}></script>
               <script
@@ -42,10 +42,10 @@ export default class BlogDocument extends Document {
                 }}
               />
             </>
-          )} */}
+          )}
 
           {/* for hotjar */}
-          {/* {isValid(blogHotjarID) && (
+          {isValid(blogHotjarID) && (
             <script
               dangerouslySetInnerHTML={{
                 __html: `(function(h,o,t,j,a,r){
@@ -58,7 +58,7 @@ export default class BlogDocument extends Document {
           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
               }}
             ></script>
-          )} */}
+          )}
 
           <GlobalStyle />
         </Head>

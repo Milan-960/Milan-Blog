@@ -1,1 +1,4 @@
-{"posts":[{"title":"Reactjs","date":"2020-03-01","slug":"react"}],"categories":["React"]}
+{
+  "posts": [{ "title": "Reactjs", "date": "2020-03-01", "slug": "react" }],
+  "categories": ["React"]
+}
