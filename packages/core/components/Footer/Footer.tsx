@@ -18,8 +18,8 @@ export function Footer() {
       </span>
       <span>
         Powered By{' '}
-        <Link href="https://github.com/hyesungoh/comet-land" target="_blank">
-          @Comet-land
+        <Link href="https://github.com/milan-960" target="_blank">
+          @Milano's Blog
         </Link>
       </span>
     </StyledFooter>
