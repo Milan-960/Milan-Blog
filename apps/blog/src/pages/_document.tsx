@@ -15,7 +15,6 @@ export default class BlogDocument extends Document {
         <Head>
           {/* for NextUI */}
           {CssBaseline.flush()}
-          <title>Milan Sachani Blog</title>
           <link rel="icon" href={favicon.default.src} />
           <meta httpEquiv="Content-type" content="text/html; charset=utf-8" />
           <meta httpEquiv="x-ua-compatible" content="personal website" />

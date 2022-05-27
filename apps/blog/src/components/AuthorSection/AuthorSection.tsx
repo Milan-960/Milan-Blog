@@ -10,7 +10,7 @@ interface Props {
   hasKbarButton?: boolean;
 }
 
-function AuthorSection({ marginBottom = '3.5rem', hasKbarButton = false }: Props) {
+function AuthorSection({ marginBottom = '2.5rem', hasKbarButton = false }: Props) {
   return (
     <Section style={{ marginBottom }}>
       <Div>
@@ -38,6 +38,7 @@ const Section = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
 `;
 
 const Div = styled.div`

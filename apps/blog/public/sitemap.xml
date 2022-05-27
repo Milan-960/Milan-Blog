@@ -7,8 +7,14 @@
   <url>
     <loc>https://blog.milansachani.dev//blogs</loc>
   </url>
+  <url>
+    <loc>https://blog.milansachani.dev//leet</loc>
+  </url>
 
   <url>
     <loc>https://blog.milansachani.dev//Blog</loc>
+  </url>
+  <url>
+    <loc>https://blog.milansachani.dev//React</loc>
   </url>
 </urlset>
