@@ -1,6 +1,1 @@
-{
-  "posts": [{ "title": "Blogs are coming soon on this site!! ❤️", "date": "2022-06-25", "slug": "blogs" }],
-  "posts": [{ "title": "Two Sum", "date": "2022-06-25", "slug": "javaScript" }],
-
-  "categories": ["Blog", "JavaScript"]
-}
+{"posts":[{"title":"Blogs are coming soon on this site!! ❤️","date":"2022-06-25","slug":"blogs"},{"title":"Two Sum challenge","date":"2022-06-25","slug":"twosum"}],"categories":["Blog","JavaScript"]}

@@ -19,30 +19,32 @@
     <pubDate>2022-06-25</pubDate>
     <guid isPermaLink="false">https://blog.milansachani.dev//blogs</guid>
     <description>
-    <![CDATA[What is reactjs?]]>
+    <![CDATA[Amazing blogs are coming soon!]]>
     </description>
     <content:encoded>
       <![CDATA[]]>
     </content:encoded>
   </item><item>
-    <title><![CDATA[Blogs are coming soon on this site!! ❤️]]></title>
-    <link>https://blog.milansachani.dev//leet</link>
+    <title><![CDATA[Two Sum challenge]]></title>
+    <link>https://blog.milansachani.dev//twosum</link>
     <pubDate>2022-06-25</pubDate>
-    <guid isPermaLink="false">https://blog.milansachani.dev//leet</guid>
+    <guid isPermaLink="false">https://blog.milansachani.dev//twosum</guid>
     <description>
-    <![CDATA[What is reactjs?]]>
+    <![CDATA[Two Sum (Leet Code challenge)]]>
     </description>
     <content:encoded>
-      <![CDATA[<h2 id="1-two-sum" class="heading"><a href="https://leetcode.com/problems/two-sum/description/" target="_blank" rel="noopener noreferer">1. Two Sum</a></h2>
+      <![CDATA[<h2 id="1-two-sum--difficulty--easy-" class="heading"><a href="https://leetcode.com/problems/two-sum/description/" target="_blank" rel="noopener noreferer">1. Two Sum</a> <strong><em>| Difficulty | Easy |</em></strong></h2>
 <h3 id="problem">Problem:</h3>
 <p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
 <p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</p>
 <p><strong>Example:</strong></p>
-<pre><code class="code-highlight"><span class="code-line">Given nums = [2, 7, 11, 15], target = 9,
+<pre><code class="code-highlight"><span class="code-line">
+</span><span class="code-line">Given nums = [2, 7, 11, 15], target = 9,
 </span><span class="code-line">Because nums[0] + nums[1] = 2 + 7 = 9,
 </span><span class="code-line">return [0, 1].
+</span><span class="code-line">
 </span></code></pre>
-<h3 id="solution">Solution:</h3>
+<h2 id="solution" class="heading">Solution:</h2>
 <p>Map the numbers to their indices as we iterate, so that we can look them back up in O(1) time complexity.</p>
 <pre class="language-javascript"><code class="language-javascript code-highlight"><span class="code-line"><span class="token doc-comment comment">/**
 </span></span><span class="code-line"><span class="token doc-comment comment"> * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token parameter">nums</span>
@@ -60,6 +62,11 @@
 </span><span class="code-line">    indicies<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
 </span><span class="code-line">  <span class="token punctuation">}</span>
 </span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// Ans:</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// | Your answer | Expected answer |</span>
+</span><span class="code-line"><span class="token comment">// | [0,1]       | [0,1]           |</span>
 </span></code></pre>]]>
     </content:encoded>
   </item>
