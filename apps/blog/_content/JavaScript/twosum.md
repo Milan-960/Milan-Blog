@@ -1,11 +1,11 @@
 ---
-title: 'Two Sum (Leet Code)'
-subtitle: 'Two Sum Solution'
+title: 'Two Sum challenge'
+subtitle: 'Two Sum (Leet Code challenge)'
 date: 2022-06-25 13:10:00
 category: 'JavaScript'
 ---
 
-## [1. Two Sum](https://leetcode.com/problems/two-sum/description/)
+## [1. Two Sum](https://leetcode.com/problems/two-sum/description/) **_| Difficulty | Easy |_**
 
 ### Problem:
 
@@ -21,7 +21,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
 
-### Solution:
+## Solution:
 
 Map the numbers to their indices as we iterate, so that we can look them back up in O(1) time complexity.
 
@@ -42,4 +42,9 @@ var twoSum = function (nums, target) {
     indicies[num] = i;
   }
 };
+
+// Ans:
+
+// | Your answer | Expected answer |
+// | [0,1]       | [0,1]           |
 ```
