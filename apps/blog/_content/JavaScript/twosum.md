@@ -7,12 +7,13 @@ category: 'JavaScript'
 
 ## [1. Two Sum](https://leetcode.com/problems/two-sum/description/) **_| Difficulty | Easy |_**
 
-### Problem:
+## Problem:
 
 Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
 
 You may assume that each input would have **exactly** one solution, and you may not use the _same_ element twice.
 
+## Example:
 **Example:**
 
 ```
