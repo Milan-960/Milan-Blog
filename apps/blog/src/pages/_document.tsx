@@ -46,7 +46,7 @@ export default class BlogDocument extends Document {
           )}
 
           {/* for hotjar */}
-          {isValid(blogHotjarID) && (
+          {/* {isValid(blogHotjarID) && (
             <script
               dangerouslySetInnerHTML={{
                 __html: `(function(h,o,t,j,a,r){
@@ -59,7 +59,7 @@ export default class BlogDocument extends Document {
           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
               }}
             ></script>
-          )}
+          )} */}
 
           <GlobalStyle />
         </Head>
