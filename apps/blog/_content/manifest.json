@@ -1,7 +1,7 @@
 {
   "posts": [
     { "title": "Blogs are coming soon on this site!! ❤️", "date": "2022-06-25", "slug": "blogs" },
-    { "title": "Two Sum challenge", "date": "2022-06-25", "slug": "Roman-to-Integer" },
+    { "title": "Integer to Roman challenge", "date": "2022-06-25", "slug": "Roman-to-Integer" },
     { "title": "Two Sum challenge", "date": "2022-06-25", "slug": "twosum" }
   ],
   "categories": ["Blog", "JavaScript"]

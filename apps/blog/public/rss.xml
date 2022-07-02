@@ -25,48 +25,85 @@
       <![CDATA[]]>
     </content:encoded>
   </item><item>
-    <title><![CDATA[Two Sum challenge]]></title>
+    <title><![CDATA[Integer to Roman challenge]]></title>
     <link>https://blog.milansachani.dev//Roman-to-Integer</link>
     <pubDate>2022-06-25</pubDate>
     <guid isPermaLink="false">https://blog.milansachani.dev//Roman-to-Integer</guid>
     <description>
-    <![CDATA[Two Sum (Leet Code challenge)]]>
+    <![CDATA[Integer to Roman (Leet Code challenge)]]>
     </description>
     <content:encoded>
-      <![CDATA[<h2 id="1-two-sum--difficulty--easy-" class="heading"><a href="https://leetcode.com/problems/two-sum/description/" target="_blank" rel="noopener noreferer">1. Two Sum</a> <strong><em>| Difficulty | Easy |</em></strong></h2>
-<h3 id="problem">Problem:</h3>
-<p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
-<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="code-highlight"><span class="code-line">
-</span><span class="code-line">Given nums = [2, 7, 11, 15], target = 9,
-</span><span class="code-line">Because nums[0] + nums[1] = 2 + 7 = 9,
-</span><span class="code-line">return [0, 1].
-</span><span class="code-line">
+      <![CDATA[<h2 id="1-integer-to-roman--difficulty--easy-" class="heading"><a href="https://leetcode.com/problems/integer-to-roman" target="_blank" rel="noopener noreferer">1. Integer to Roman</a> <strong><em>| Difficulty | Easy |</em></strong></h2>
+<h2 id="problem" class="heading">Problem:</h2>
+<p>Problem:
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</p>
+<pre><code class="code-highlight"><span class="code-line">Symbol       Value    
+</span><span class="code-line">I             1
+</span><span class="code-line">V             5
+</span><span class="code-line">X             10
+</span><span class="code-line">L             50
+</span><span class="code-line">C             100
+</span><span class="code-line">D             500
+</span><span class="code-line">M             1000
+</span></code></pre>
+<p>For example, two is written as <code>II</code> in Roman numeral, just two one's added together. Twelve is written as, <code>XII</code>, which is simply <code>X</code> + <code>II</code>. The number twenty seven is written as <code>XXVII</code>, which is <code>XX</code> + <code>V</code> + <code>II</code>.</p>
+<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>
+<ul>
+<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9.</li>
+<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90.</li>
+<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>
+</ul>
+<p>Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.</p>
+<h2 id="examples" class="heading">Examples</h2>
+<p><strong>Example 1:</strong></p>
+<pre><code class="code-highlight"><span class="code-line">Input: "III"
+</span><span class="code-line">Output: 3
+</span></code></pre>
+<p><strong>Example 2:</strong></p>
+<pre><code class="code-highlight"><span class="code-line">Input: "IV"
+</span><span class="code-line">Output: 4
+</span></code></pre>
+<p><strong>Example 3:</strong></p>
+<pre><code class="code-highlight"><span class="code-line">Input: "IX"
+</span><span class="code-line">Output: 9
+</span></code></pre>
+<p><strong>Example 4:</strong></p>
+<pre><code class="code-highlight"><span class="code-line">Input: "LVIII"
+</span><span class="code-line">Output: 58
+</span><span class="code-line">Explanation: C = 100, L = 50, XXX = 30 and III = 3.
+</span></code></pre>
+<p><strong>Example 5:</strong></p>
+<pre><code class="code-highlight"><span class="code-line">Input: "MCMXCIV"
+</span><span class="code-line">Output: 1994
+</span><span class="code-line">Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 </span></code></pre>
 <h2 id="solution" class="heading">Solution:</h2>
-<p>Map the numbers to their indices as we iterate, so that we can look them back up in O(1) time complexity.</p>
+<p>Normally we just add up the digits, except when the digit is greater than its left (e.g. IV). In that case we need to fallback and remove the last digit then combine the two as new digit. That is why we subtract the last digit twice.</p>
 <pre class="language-javascript"><code class="language-javascript code-highlight"><span class="code-line"><span class="token doc-comment comment">/**
-</span></span><span class="code-line"><span class="token doc-comment comment"> * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token parameter">nums</span>
-</span></span><span class="code-line"><span class="token doc-comment comment"> * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">}</span></span> <span class="token parameter">target</span>
-</span></span><span class="code-line"><span class="token doc-comment comment"> * <span class="token keyword">@return</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+</span></span><span class="code-line"><span class="token doc-comment comment"> * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>string<span class="token punctuation">}</span></span> <span class="token parameter">s</span>
+</span></span><span class="code-line"><span class="token doc-comment comment"> * <span class="token keyword">@return</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">}</span></span>
 </span></span><span class="code-line"><span class="token doc-comment comment"> */</span>
-</span><span class="code-line"><span class="token keyword">var</span> <span class="token function-variable function">twoSum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-</span><span class="code-line">  <span class="token keyword">const</span> indicies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 </span><span class="code-line">
-</span><span class="code-line">  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> nums<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-</span><span class="code-line">    <span class="token keyword">const</span> num <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-</span><span class="code-line">    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>indicies<span class="token punctuation">[</span>target <span class="token operator">-</span> num<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token keyword null nil">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-</span><span class="code-line">      <span class="token keyword control-flow">return</span> <span class="token punctuation">[</span>indicies<span class="token punctuation">[</span>target <span class="token operator">-</span> num<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> roman <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string-property property">'I'</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string-property property">'V'</span><span class="token operator">:</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token string-property property">'X'</span><span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token string-property property">'L'</span><span class="token operator">:</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token string-property property">'C'</span><span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token string-property property">'D'</span><span class="token operator">:</span><span class="token number">500</span><span class="token punctuation">,</span><span class="token string-property property">'M'</span><span class="token operator">:</span><span class="token number">1000</span><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">var</span> <span class="token function-variable function">romanToInt</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token constant">S</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">let</span> ans <span class="token operator">=</span> <span class="token number">0</span>
+</span><span class="code-line">    <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token constant">S</span><span class="token punctuation">.</span><span class="token property-access">length</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token operator">~</span>i<span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">let</span> num <span class="token operator">=</span> roman<span class="token punctuation">[</span><span class="token constant">S</span><span class="token punctuation">.</span><span class="token method function property-access">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span>
+</span><span class="code-line">        <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">*</span> num <span class="token operator">&#x3C;</span> ans<span class="token punctuation">)</span> ans <span class="token operator">-=</span> num
+</span><span class="code-line">        <span class="token keyword control-flow">else</span> ans <span class="token operator">+=</span> num
 </span><span class="code-line">    <span class="token punctuation">}</span>
-</span><span class="code-line">    indicies<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
-</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token keyword control-flow">return</span> ans
 </span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
 </span><span class="code-line">
 </span><span class="code-line"><span class="token comment">// Ans:</span>
 </span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// Your input</span>
+</span><span class="code-line"><span class="token comment">// [3,2,2,3]</span>
+</span><span class="code-line"><span class="token comment">// 3</span>
+</span><span class="code-line">
 </span><span class="code-line"><span class="token comment">// | Your answer | Expected answer |</span>
-</span><span class="code-line"><span class="token comment">// | [0,1]       | [0,1]           |</span>
+</span><span class="code-line"><span class="token comment">// | [2,2]       | [2,2]           |</span>
 </span></code></pre>]]>
     </content:encoded>
   </item><item>
@@ -79,9 +116,10 @@
     </description>
     <content:encoded>
       <![CDATA[<h2 id="1-two-sum--difficulty--easy-" class="heading"><a href="https://leetcode.com/problems/two-sum/description/" target="_blank" rel="noopener noreferer">1. Two Sum</a> <strong><em>| Difficulty | Easy |</em></strong></h2>
-<h3 id="problem">Problem:</h3>
+<h2 id="problem" class="heading">Problem:</h2>
 <p>Given an array of integers, return <strong>indices</strong> of the two numbers such that they add up to a specific target.</p>
 <p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</p>
+<h2 id="example" class="heading">Example:</h2>
 <p><strong>Example:</strong></p>
 <pre><code class="code-highlight"><span class="code-line">
 </span><span class="code-line">Given nums = [2, 7, 11, 15], target = 9,
