@@ -7,7 +7,6 @@ please read following link.
 
 ## How to deploy with vercel
 
-This project using `turborepo`.
 
 so, you can deploy very easy with this [vercel guide](https://vercel.com/docs/concepts/git/monorepos#turborepo)
 
