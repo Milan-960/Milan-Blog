@@ -100,7 +100,6 @@ jobs:
         with:
           working-directory: apps/blog
           start: yarn dev
-          wait-on: 'http://localhost:3000'
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_BLOG_RECORD_KEY }}
@@ -111,7 +110,6 @@ jobs:
         with:
           working-directory: apps/resume
           start: yarn dev
-          wait-on: 'http://localhost:3001'
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RESUME_RECORD_KEY }}
