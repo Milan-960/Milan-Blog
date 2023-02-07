@@ -7,7 +7,6 @@ please read following link.
 
 ## How to deploy with vercel
 
-
 so, you can deploy very easy with this [vercel guide](https://vercel.com/docs/concepts/git/monorepos#turborepo)
 
 - blog build command

@@ -21,7 +21,7 @@ function SEO({ title, description, ogImage }: Props) {
   return (
     <Head>
       <title>{TITLE}</title>
-      
+
       <meta property="og:site_name" content="Milan Sachani Blog" />
       <meta property="og:url" content="http://blog.milansachani.dev/" />
 
@@ -45,7 +45,6 @@ function SEO({ title, description, ogImage }: Props) {
       <meta property="twitter:description" content={DESCRIPTION} />
       <meta property="twitter:image" content={IMAGE} />
       <meta name="twitter:creator" content={TITLE} />
-
     </Head>
   );
 }
