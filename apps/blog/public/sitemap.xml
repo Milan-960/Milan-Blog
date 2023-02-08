@@ -13,8 +13,8 @@
   <url>
     <loc>https://blog.milansachani.dev//twosum</loc>
   </url>
-    <url>
-    <loc>https://blog.milansachani.dev//What-is-Redux</loc>
+  <url>
+    <loc>https://blog.milansachani.dev//What-is-redux</loc>
   </url>
 
   <url>
@@ -23,7 +23,7 @@
   <url>
     <loc>https://blog.milansachani.dev//JavaScript</loc>
   </url>
-    <url>
+  <url>
     <loc>https://blog.milansachani.dev//React</loc>
   </url>
 </urlset>
