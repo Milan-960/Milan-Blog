@@ -19,7 +19,7 @@ export function Footer() {
       <span>
         Powered By
         <Link href="https://milansachani.dev" target="_blank">
-          @Milan
+          @Milan Sachani
         </Link>
       </span>
     </StyledFooter>
