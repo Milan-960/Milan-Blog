@@ -1,5 +1,5 @@
 import { openExternalLink } from '../../utils';
-import { facebookUrl, githubUrl, stackoverflowUrl, instagramUrl, linkedInUrl, twitterUrl } from '../SocialMedia';
+import { githubUrl, instagramUrl, linkedInUrl, stackoverflowUrl, twitterUrl } from '../SocialMedia';
 import { IconActionType } from './type';
 
 function isValid(value: unknown) {

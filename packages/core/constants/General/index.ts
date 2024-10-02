@@ -15,4 +15,3 @@ export * as authorImage from './author.png';
 
 // using blog og:image
 export * as defaultMetaBackground from './defaultMetaBackground.png';
-
