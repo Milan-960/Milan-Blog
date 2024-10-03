@@ -4,7 +4,7 @@ const siteMetadata = {
   title: "Blog",
   author: "Milan Sachani",
   headerTitle: "Milan's Blog",
-  description: "A blog created with Next.js and Tailwind.css",
+  description: "A blog by Milan Sachani",
   language: "en-us",
   theme: "system", // system, dark or light
   siteUrl: "",

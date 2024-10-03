@@ -1,4 +1,7 @@
 // src/app/layout.tsx
+import "./globals.css";
+
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
@@ -6,7 +9,6 @@ import { SearchProvider, SearchConfig } from "pliny/search/index.js";
 
 import Navbar from "@/components/Navbar";
 import SectionContainer from "@/components/SectionContainer";
-import "./globals.css";
 import Footer from "@/components/Footer";
 import siteMetadata from "@/data/siteMetadata";
 

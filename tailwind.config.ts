@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+import { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography"; // Proper ES6 import for the plugin
 
 const config: Config = {
   content: [
@@ -17,7 +18,7 @@ const config: Config = {
     },
   },
   darkMode: "class", // Enable dark mode using a class
-  plugins: [],
+  plugins: [typography], // Use the imported typography plugin
 };
 
 export default config;
