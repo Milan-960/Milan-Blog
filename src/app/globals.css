@@ -1,0 +1,28 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Mode */
+.light {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+/* Dark Mode */
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+/* Body Styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography adjustments */
+h1, h2, h3, p {
+  margin-bottom: 1rem;
+}
