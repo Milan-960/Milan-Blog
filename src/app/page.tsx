@@ -1,5 +1,4 @@
 // src/app/page.tsx
-import Link from "next/link";
 import HomePage from "@/pages/Home";
 import { getAllPosts, PostMeta } from "@/utils/getAllPosts";
 import Card from "@/components/Card";
