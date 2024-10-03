@@ -1,8 +1,12 @@
+import { getAllPosts } from '../utils/getAllPosts.js';
 import fs from 'fs';
 import path from 'path';
-import { getAllPosts } from '../utils/getAllPosts';  // Correct path
+import dotenv from 'dotenv';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com';
+// Load environment variables from .env file
+dotenv.config();
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 const generateSitemap = () => {
   const posts = getAllPosts();
