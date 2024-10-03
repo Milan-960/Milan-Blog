@@ -10,9 +10,15 @@ type CardProps = {
   image: string;
 };
 
-export default function Card({ title, description, tags, slug, image }: CardProps) {
+export default function Card({
+  title,
+  description,
+  tags,
+  slug,
+  image,
+}: CardProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 w-full rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
       {/* Image */}
       <div className="relative w-full h-48">
         <Image
@@ -27,8 +33,11 @@ export default function Card({ title, description, tags, slug, image }: CardProp
       {/* Card content */}
       <div className="p-6">
         {/* Title */}
-        <Link href={`/blog/${slug}`} className="text-2xl font-bold text-gray-900 dark:text-white hover:underline">
-            {title}
+        <Link
+          href={`/blog/${slug}`}
+          className="text-2xl font-bold text-gray-900 dark:text-white hover:underline"
+        >
+          {title}
         </Link>
 
         {/* Description */}
@@ -44,8 +53,6 @@ export default function Card({ title, description, tags, slug, image }: CardProp
               {tag}
             </span>
           ))}
-
-
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
   // Render MDX content
   return (
-    <div className="p-6 max-w-3xl mx-auto">
+    <div className="mx-auto">
       <h1 className="text-4xl font-bold mb-4 text-center">{data.title}</h1>
       <div className="prose prose-lg dark:prose-dark mx-auto">
         <MDXRemote source={content} />
