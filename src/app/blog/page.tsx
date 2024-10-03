@@ -15,7 +15,7 @@ export default function BlogPage() {
               <Link href={`/blog/${post.slug}`} className="text-2xl font-bold text-gray-900 dark:text-white hover:underline">
                   {post.title}
               </Link>
-              <p className="dark:text-gray-300 text-gray-300 mt-2">{post.description}</p>
+            <p className="dark:text-white text-black mt-2">{post.description}</p>
 
               <div className="flex space-x-2 mt-2">
                 {post.tags.map((tag, index) => (
