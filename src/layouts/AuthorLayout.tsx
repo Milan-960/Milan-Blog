@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import SocialIcon from "@/components/social-icons";
 import Image from "next/image";
+import SocialIcon from "@/components/social-icons";
 
 interface AuthorProps {
   name: string;
@@ -19,9 +19,8 @@ interface Props {
 }
 
 export default function AuthorLayout({ children, content }: Props) {
-  console.log("🚀 ~ AuthorLayout ~ content:", content);
   if (!content) {
-    return <div>Error: Author content is missing.</div>; // Handle missing content
+    return <div>Error: Author content is missing.</div>;
   }
 
   const {
@@ -38,17 +37,16 @@ export default function AuthorLayout({ children, content }: Props) {
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          About
+        <h1 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          About {name}
         </h1>
       </div>
 
       {/* Responsive Flexbox Layout */}
-      <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+      <div className="flex flex-col sm:flex-row sm:space-x-8">
         {/* Left Column: Avatar and Info */}
         <div className="flex-shrink-0 flex flex-col items-center sm:items-start sm:text-left sm:w-1/3">
           {/* Avatar Rendering */}
-
           {avatar ? (
             <Image
               src={avatar}
@@ -80,7 +78,7 @@ export default function AuthorLayout({ children, content }: Props) {
         </div>
 
         {/* Right Column: About Text */}
-        <div className="flex-1 prose max-w-none dark:prose-dark sm:pt-0 sm:pb-0 pt-8">
+        <div className="flex-1 text-gray-900 dark:text-gray-100 prose max-w-none dark:prose-dark pt-8 sm:pt-0">
           {children}
         </div>
       </div>
