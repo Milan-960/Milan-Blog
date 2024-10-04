@@ -10,6 +10,7 @@ import Navbar from "@/components/Navbar";
 import SectionContainer from "@/components/SectionContainer";
 import Footer from "@/components/Footer";
 import siteMetadata from "@/data/siteMetadata";
+import LoadingLayout from "@/layouts/LoadingLayout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,15 +38,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Wrap the app in ThemeProvider */}
         <ThemeProvider attribute="class" defaultTheme="system">
-          <SectionContainer>
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Navbar />
-              {children}
-            </SearchProvider>
-            <Footer />
-          </SectionContainer>
+          <LoadingLayout>
+            <SectionContainer>
+              <SearchProvider
+                searchConfig={siteMetadata.search as SearchConfig}
+              >
+                <Navbar />
+                {children}
+              </SearchProvider>
+              <Footer />
+            </SectionContainer>
+          </LoadingLayout>
         </ThemeProvider>
       </body>
     </html>

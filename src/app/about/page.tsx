@@ -1,7 +1,8 @@
-"use client"; // This is necessary for Next.js app directory to use hooks
+"use client";
 
 import { useEffect, useState } from "react";
-import { MDXRemoteSerializeResult } from "next-mdx-remote"; // Import the type for mdxSource
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { motion } from "framer-motion";
 import AboutPage from "@/pages/AboutPage";
 
 interface AuthorProps {
@@ -17,6 +18,20 @@ interface AuthorProps {
     github: string;
   };
 }
+
+// Loading Spinner Component with Framer Motion
+const LoadingSpinner = () => {
+  return (
+    <motion.div
+      className="flex justify-center items-center h-screen"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1, rotate: 360 }} // Scaling and rotating animation
+      transition={{ duration: 1, ease: "easeInOut", repeat: Infinity }} // Infinite looping
+    >
+      <div className="h-16 w-16 border-4 border-t-transparent border-blue-500 rounded-full"></div>
+    </motion.div>
+  );
+};
 
 export default function AboutMePage() {
   const [authorData, setAuthorData] = useState<AuthorProps | null>(null);
@@ -39,7 +54,9 @@ export default function AboutMePage() {
     fetchAuthorData();
   }, []);
 
-  if (loading) return <div>Loading...</div>; // Loading state
+  // Show loading spinner while data is being fetched
+  if (loading) return <LoadingSpinner />; // Show the animated loading spinner
+
   if (!authorData) return <div>Error: Failed to load author data</div>; // Error state
 
   // Pass the fetched data to the AboutPage component
