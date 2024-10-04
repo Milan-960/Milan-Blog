@@ -1,7 +1,6 @@
 // src/app/layout.tsx
 import "./globals.css";
 
-
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";

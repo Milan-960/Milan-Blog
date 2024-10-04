@@ -43,9 +43,9 @@ export default function AuthorLayout({ children, content }: Props) {
       </div>
 
       {/* Responsive Flexbox Layout */}
-      <div className="flex flex-col sm:flex-row sm:space-x-8">
+      <div className="flex flex-col sm:flex-row w-full gap-4">
         {/* Left Column: Avatar and Info */}
-        <div className="flex-shrink-0 flex flex-col items-center sm:items-start sm:text-left sm:w-1/3">
+        <div className="w-full sm:w-1/3 flex flex-col items-center justify-center divide-gray-200 dark:divide-gray-700 sm:items-center sm:text-left p-4">
           {/* Avatar Rendering */}
           {avatar ? (
             <Image
@@ -62,7 +62,7 @@ export default function AuthorLayout({ children, content }: Props) {
           )}
 
           {/* Name and Info */}
-          <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight text-white">
+          <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
             {name}
           </h3>
           <div className="text-gray-400">{occupation}</div>
@@ -77,11 +77,12 @@ export default function AuthorLayout({ children, content }: Props) {
           </div>
         </div>
 
-        {/* Right Column: About Text */}
-        <div className="flex-1 text-gray-900 dark:text-gray-100 prose max-w-none dark:prose-dark pt-8 sm:pt-0">
+        {/* Right Column: 70% width on larger screens */}
+        <div className="flex flex-col w-full justify-center sm:w-2/3 p-4">
           {children}
         </div>
       </div>
+      <div className="divide-y divide-gray-200 dark:divide-gray-700"></div>
     </div>
   );
 }
