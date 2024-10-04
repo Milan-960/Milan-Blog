@@ -36,7 +36,7 @@ export default function AuthorLayout({ children, content }: Props) {
   } = content;
 
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-700">
+    <div className=" dark:divide-gray-700">
       {/* Top Section with author info */}
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
         <h1 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -47,9 +47,9 @@ export default function AuthorLayout({ children, content }: Props) {
       {/* Full Width Section with 30%/70% Layout */}
       <SectionContainer fullWidth>
         {/* Author Details Layout */}
-        <div className="flex flex-col sm:flex-row w-full gap-4">
+        <div className="flex flex-col sm:flex-row w-full gap-4 rounded-lg">
           {/* Left Column: Avatar and Info */}
-          <div className="w-full sm:w-1/3 flex flex-col items-center sm:items-start justify-center bg-gray-100 p-4">
+          <div className="w-full sm:w-1/3 flex flex-col items-center sm:items-center justify-center bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
             {/* Avatar */}
             {avatar ? (
               <Image
@@ -60,8 +60,10 @@ export default function AuthorLayout({ children, content }: Props) {
                 className="h-full w-full rounded-lg object-cover"
               />
             ) : (
-              <div className="h-48 w-48 bg-gray-300 rounded-full flex items-center justify-center">
-                <span className="text-gray-600">No Avatar</span>
+              <div className="h-48 w-48 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center">
+                <span className="text-gray-600 dark:text-gray-400">
+                  No Avatar
+                </span>
               </div>
             )}
 
@@ -69,8 +71,8 @@ export default function AuthorLayout({ children, content }: Props) {
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
               {name}
             </h3>
-            <div className="text-gray-400">{occupation}</div>
-            <div className="text-gray-400">{company}</div>
+            <div className="text-gray-400 dark:text-gray-500">{occupation}</div>
+            <div className="text-gray-400 dark:text-gray-500">{company}</div>
 
             {/* Social Icons */}
             <div className="flex space-x-4 pt-6">
@@ -82,13 +84,13 @@ export default function AuthorLayout({ children, content }: Props) {
           </div>
 
           {/* Right Column: 70% width on larger screens */}
-          <div className="w-full sm:w-2/3 flex flex-col justify-center bg-gray-200 p-4">
+          <div className="w-full sm:w-2/3 flex flex-col justify-center bg-gray-200 dark:bg-gray-700 p-4 rounded-lg">
             {children}
           </div>
         </div>
       </SectionContainer>
       {/* Bottom Divider */}
-      <div className="divide-y divide-gray-200 dark:divide-gray-700"></div>
+      {/* <div className="divide-y divide-gray-200 dark:divide-gray-700"></div> */}
     </div>
   );
 }
