@@ -1,3 +1,4 @@
+// src/lib/posts.ts
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -10,15 +11,15 @@ export type PostMeta = {
   img: string;
 };
 
+// Get all posts along with their tags
 export function getAllPosts(): PostMeta[] {
   const postsDirectory = path.join(process.cwd(), "content");
   const filenames = fs.readdirSync(postsDirectory);
 
-  // Filter out directories, only process .mdx files
   return filenames
     .filter((filename) => {
       const filePath = path.join(postsDirectory, filename);
-      return fs.statSync(filePath).isFile() && filename.endsWith(".mdx"); // Only include .mdx files
+      return fs.statSync(filePath).isFile() && filename.endsWith(".mdx");
     })
     .map((filename) => {
       const filePath = path.join(postsDirectory, filename);
@@ -27,21 +28,24 @@ export function getAllPosts(): PostMeta[] {
       try {
         const { data } = matter(fileContent);
 
-        // Correct fallback image path (omit "public/")
-        const imageUrl = data.img || "/images/default-blog.webp";
-
-        console.log(`Image URL for ${filename}: ${imageUrl}`);
-
         return {
           slug: filename.replace(".mdx", ""),
           title: data.title,
           description: data.description,
           tags: data.tags || [],
-          img: imageUrl,
+          img: data.img || "/images/default-blog.webp",
         };
       } catch (error) {
         console.error(`Error processing file: ${filename}`, error);
         throw error;
       }
     });
+}
+
+// Helper function to get all unique tags
+export function getAllTags(): string[] {
+  const posts = getAllPosts();
+  const allTags = posts.flatMap((post) => post.tags); // Extract all tags
+  const uniqueTags = Array.from(new Set(allTags)); // Get unique tags
+  return uniqueTags;
 }

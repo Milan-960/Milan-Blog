@@ -71,8 +71,8 @@ export default function AuthorLayout({ children, content }: Props) {
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
               {name}
             </h3>
-            <div className="text-gray-400 dark:text-gray-500">{occupation}</div>
-            <div className="text-gray-400 dark:text-gray-500">{company}</div>
+            <div className="text-gray-800 dark:text-gray-300">{occupation}</div>
+            <div className="text-gray-800 dark:text-gray-300">{company}</div>
 
             {/* Social Icons */}
             <div className="flex space-x-4 pt-6">

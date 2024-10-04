@@ -1,6 +1,8 @@
-// src/components/Card.tsx
+"use client"; // This ensures the component is only run on the client
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type CardProps = {
   title: string;
@@ -18,7 +20,15 @@ export default function Card({
   image,
 }: CardProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg">
+    <motion.div
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0px 8px 30px rgba(0, 0, 0, 0.12)",
+      }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+    >
       {/* Image */}
       <div className="relative w-full h-48">
         <Image
@@ -46,15 +56,16 @@ export default function Card({
         {/* Tags */}
         <div className="mt-4 space-x-2">
           {tags.map((tag, index) => (
-            <span
+            <Link
               key={index}
-              className="inline-block bg-blue-100 text-blue-600 px-3 py-1 text-sm font-semibold rounded-full"
+              href={`/tags/${tag}`}
+              className="inline-block bg-blue-100 text-blue-600 px-3 py-1 text-sm font-semibold rounded-full hover:underline hover:cursor-pointer"
             >
               {tag}
-            </span>
+            </Link>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -7,7 +7,11 @@ export default function BlogPage() {
 
   return (
     <div className="mx-auto">
-      <h1 className="text-4xl font-bold text-center mb-8">Explore Blogs</h1>
+      <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+        <h1 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          Explore Blogs
+        </h1>
+      </div>
       <div className="space-y-4">
         {posts.length > 0 ? (
           posts.map((post) => (

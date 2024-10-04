@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: var(--link);
+  --tw-prose-bold: var(--bold);
+}
+
 /* Light Mode */
 .light {
   --background: #ffffff;
@@ -23,6 +30,9 @@ body {
 }
 
 /* Typography adjustments */
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin-bottom: 1rem;
 }
