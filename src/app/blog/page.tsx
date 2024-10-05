@@ -12,6 +12,7 @@ export default function BlogPage() {
           Explore Blogs
         </h1>
       </div>
+
       <div className="space-y-4">
         {posts.length > 0 ? (
           posts.map((post) => (

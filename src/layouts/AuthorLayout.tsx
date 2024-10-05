@@ -40,7 +40,8 @@ export default function AuthorLayout({ children, content }: Props) {
       {/* Top Section with author info */}
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
         <h1 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          About {name}
+          About
+          <span className="px-2 text-blue-500 dark:text-blue-500">{name}</span>
         </h1>
       </div>
 
