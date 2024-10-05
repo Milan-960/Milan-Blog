@@ -5,7 +5,7 @@ import { getMetadata } from "@/utils/getMetadata";
 
 // SEO metadata for the home page
 export const metadata = getMetadata({
-  title: "Blogs - My Blog",
+  title: "Blogs - Milan's Blog",
   description:
     "Explore the latest articles on web development, JavaScript, and more.",
   keywords: ["blog", "Next.js", "SEO"],
@@ -14,7 +14,7 @@ export const metadata = getMetadata({
   viewport: "width=device-width, initial-scale=1",
   canonical: "https://blog.milansachani.dev/",
   openGraph: {
-    title: "Blogs - My Blog",
+    title: "Blogs - Milan's Blog",
     description:
       "Explore the latest articles on web development, JavaScript, and more. ",
     url: "https://blog.milansachani.dev/",
@@ -28,7 +28,7 @@ export const metadata = getMetadata({
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blogs - My Blog",
+    title: "Blogs - Milan's Blog",
     description:
       "Explore the latest articles on web development, JavaScript, and more.",
     images: ["/images/seo.png"],
