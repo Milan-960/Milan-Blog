@@ -28,7 +28,7 @@ export const metadata = getMetadata({
   },
   twitter: {
     card: "summary_large_image",
-    title: "Welcome to My Blog",
+    title: "About me - My Blog",
     description:
       "Explore the latest articles on web development, JavaScript, and more.",
     images: ["/images/seo.png"],
