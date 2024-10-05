@@ -1,7 +1,5 @@
 // src/app/layout.tsx
 import "./globals.css";
-
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import { SearchProvider, SearchConfig } from "pliny/search/index.js";
@@ -22,11 +20,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
-export const metadata: Metadata = {
-  title: "My Blog App",
-  description: "A blog app with dark mode and smooth animations",
-};
 
 export default function RootLayout({
   children,

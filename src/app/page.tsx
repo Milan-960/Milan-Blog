@@ -1,7 +1,40 @@
 // src/app/page.tsx
-import HomePage from "@/pages/Home";
+import HomePage from "@/pages/HomePage";
 import { getAllPosts, PostMeta } from "@/utils/getAllPosts";
 import Card from "@/components/Card";
+import { getMetadata } from "@/utils/getMetadata";
+
+// SEO metadata for the home page
+export const metadata = getMetadata({
+  title: "Welcome to My Blog",
+  description:
+    "Explore the latest articles on web development, JavaScript, and more.",
+  keywords: ["blog", "Next.js", "SEO"],
+  author: "Milan Sachani",
+  robots: "index,follow",
+  viewport: "width=device-width, initial-scale=1",
+  canonical: "https://blog.milansachani.dev/",
+  openGraph: {
+    title: "Welcome to My Blog",
+    description:
+      "Explore the latest articles on web development, JavaScript, and more.",
+    url: "https://blog.milansachani.dev/",
+    type: "website",
+    images: [
+      {
+        url: "/images/seo.png",
+        alt: "A minimalistic blog banner for SEO purposes representing web development and JavaScript.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Welcome to My Blog",
+    description:
+      "Explore the latest articles on web development, JavaScript, and more.",
+    images: ["https://your-site-url.com/blog-image.jpg"],
+  },
+});
 
 export default function Home() {
   const posts: PostMeta[] = getAllPosts();

@@ -1,5 +1,3 @@
-"use client";
-
 import siteMetadata from "@/data/siteMetadata";
 import React from "react";
 
