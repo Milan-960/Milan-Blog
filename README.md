@@ -13,7 +13,11 @@ A modern, responsive blog application built with **Next.js**, **MDX**, **Tailwin
 
 ## Demo
 
-You can view the live demo of this blog at [https://yourblogdomain.com](https://yourblogdomain.com).
+You can view the live demo of this blog at [https://blog.milansachani.dev/](https://blog.milansachani.dev/).
+
+## PlayWrite Test URL
+
+You can view the live demo of this blog app test cases [Milan-Blog-Test](https://milan-960.github.io/Milan-Blog/)
 
 ## Table of Contents
 
@@ -35,7 +39,7 @@ To get started, clone this repository and install the dependencies:
 git clone https://github.com/Milan-960/nextjs-blog-app.git
 cd my-blog-app
 npm install
-``````
+```
 
 ## Running the Project Locally
 
@@ -133,7 +137,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-
 ### How to Use It
 
 1. **Update the necessary links**: Replace placeholder links like `https://yourblogdomain.com` with your actual domain or GitHub repository URL.
@@ -141,8 +144,3 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 3. **Add a License**: You can include an open-source license like MIT or any other license based on your requirements.
 
 This template should be good to go for sharing on GitHub as a community project!
-
-
-
-
-
