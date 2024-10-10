@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import Image from "next/image";
 import SectionContainer from "@/components/SectionContainer";
 import SocialIcon from "@/components/social-icons";
-import Link from "next/link";
 
 interface AuthorProps {
   name: string;
