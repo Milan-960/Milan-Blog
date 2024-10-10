@@ -36,3 +36,7 @@ h3,
 p {
   margin-bottom: 1rem;
 }
+
+.text-gradient-blue {
+  @apply text-transparent bg-clip-text bg-gradient-light-blue;
+}

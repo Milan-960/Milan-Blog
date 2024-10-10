@@ -61,6 +61,17 @@ const config: Config = {
           },
         },
       },
+      colors: {
+        "light-blue": {
+          400: "#60a5fa", // Lighter blue
+          500: "#3b82f6", // Default blue
+          600: "#2563eb", // Slightly darker blue
+        },
+      },
+      backgroundImage: {
+        "gradient-light-blue":
+          "linear-gradient(to right, #60a5fa, #3b82f6, #2563eb)", // Lighter blue gradient
+      },
     },
   },
   darkMode: "class",

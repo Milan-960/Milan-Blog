@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Image from "next/image";
 import SectionContainer from "@/components/SectionContainer";
 import SocialIcon from "@/components/social-icons";
+import Link from "next/link";
 
 interface AuthorProps {
   name: string;
@@ -41,7 +42,7 @@ export default function AuthorLayout({ children, content }: Props) {
       <div className="space-y-2 pb-8 pt-6 md:space-y-5">
         <h1 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
           About
-          <span className="px-2 text-blue-500 dark:text-blue-500">{name}</span>
+          <span className="px-2 text-gradient-blue">{name}</span>
         </h1>
       </div>
 
