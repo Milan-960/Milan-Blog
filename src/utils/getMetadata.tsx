@@ -39,7 +39,7 @@ interface MetadataParams {
 // Updated getMetadata function with proper typing
 export function getMetadata({
   title,
-  description = "A blog app with dark mode and smooth animations.",
+  description = "A blog app created by Milan Sachani",
   keywords = ["blog", "Next.js", "SEO"],
   url = "https://your-site-url.com",
   image = "https://your-site-url.com/default-image.jpg",
