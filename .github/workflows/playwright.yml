@@ -13,12 +13,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
+
+      # Install dependencies
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
+
+      # Build the Next.js application
+      - name: Build Next.js app
+        run: npm run build
+
+      # Install Playwright browsers
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+
+      # Run Playwright tests
       - name: Run Playwright tests
         run: npx playwright test
+
+      # Upload Playwright report
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
