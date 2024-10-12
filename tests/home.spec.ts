@@ -8,7 +8,7 @@ test.describe("Home Page", () => {
     await page.goto("/");
 
     // Check that the title of the page is correct
-    await expect(page).toHaveTitle("Welcome to Milan's Blog");
+    await expect(page).toHaveTitle("Milan Sachani Blog");
 
     // Check if the heading contains 'Latest'
     const heading = page.locator("h1");
