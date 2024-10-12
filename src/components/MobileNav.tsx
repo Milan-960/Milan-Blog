@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { Fragment, useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
-import { Fragment, useState, useEffect, useRef } from "react";
 import Link from "./Link";
 
 const headerNavLinks = [
@@ -20,6 +20,7 @@ const headerNavLinks = [
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false);
   const navRef = useRef(null);
+  const pathname = usePathname() || ""; // Fallback to an empty string in case pathname is null
 
   const onToggleNav = () => {
     setNavShow((status) => {
@@ -34,7 +35,7 @@ const MobileNav = () => {
 
   useEffect(() => {
     return clearAllBodyScrollLocks;
-  });
+  }, []);
 
   return (
     <>
@@ -86,16 +87,26 @@ const MobileNav = () => {
                 ref={navRef}
                 className="z-99 mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto pl-12 pt-2 text-left"
               >
-                {headerNavLinks.map((link) => (
-                  <Link
-                    key={link.title}
-                    href={link.href}
-                    className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
-                    onClick={onToggleNav}
-                  >
-                    {link.title}
-                  </Link>
-                ))}
+                {headerNavLinks.map((link) => {
+                  const isActive =
+                    pathname === link.href ||
+                    pathname.startsWith(link.href + "/");
+
+                  return (
+                    <Link
+                      key={link.title}
+                      href={link.href}
+                      className={`mb-4 py-2 pr-4 text-2xl font-bold tracking-widest ${
+                        isActive
+                          ? "text-blue-600 dark:text-blue-400"
+                          : "text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-400"
+                      }`}
+                      onClick={onToggleNav}
+                    >
+                      {link.title}
+                    </Link>
+                  );
+                })}
               </nav>
               <button
                 className="fixed right-4 top-7 z-80 h-16 w-16 p-4 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
