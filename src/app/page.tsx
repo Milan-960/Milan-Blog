@@ -32,7 +32,7 @@ export const metadata = getMetadata({
     title: "Milan Sachani Blog",
     description:
       "Explore the latest articles on web development, JavaScript, and more.",
-    images: ["https://your-site-url.com/blog-image.jpg"],
+    images: ["/images/seo.png"],
   },
 });
 
