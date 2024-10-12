@@ -43,7 +43,7 @@ export default function Card({
       </div>
 
       {/* Card content */}
-      <div className="p-6">
+      <div className="p-4">
         {/* Title */}
         <Link
           href={`/blog/${slug}`}
@@ -56,7 +56,7 @@ export default function Card({
         <p className="mt-2 text-gray-600 dark:text-gray-400">{description}</p>
 
         {/* Tags */}
-        <div className="mt-4 space-x-2">
+        <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <Link
               key={index}
