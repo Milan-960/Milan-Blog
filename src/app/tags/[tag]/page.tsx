@@ -37,33 +37,42 @@ export default function TagPage({ params }: TagPageProps) {
           <span className="px-2 text-blue-500 dark:text-blue-500">{tag}</span>
         </h1>
       </div>
-      {filteredPosts.length > 0 ? (
-        <ul>
-          {filteredPosts.map((post) => (
-            <li key={post.slug} className="mb-4">
-              <Link
-                href={`/blog/${post.slug}`}
-                className="text-lg font-semibold text-blue-500 hover:underline"
-              >
-                {post.title}
-              </Link>
-              <p className="text-gray-500">{post.description}</p>
-              <div className="flex space-x-2 mt-2">
-                {post.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs"
-                  >
-                    #{tag}
-                  </span>
-                ))}
+
+      <div className="space-y-4">
+        {filteredPosts.length > 0 ? (
+          <div>
+            {filteredPosts.map((post) => (
+              <div key={post.slug} className="border-b pb-4">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="text-2xl font-semibold text-blue-500 hover:underline"
+                >
+                  {post.title}
+                </Link>
+
+                <p className="dark:text-white text-black mt-2">
+                  {post.description}
+                </p>
+
+                <div className="flex space-x-2 mt-2">
+                  {post.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No posts found for this tag.</p>
-      )}
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-gray-600">
+            No posts found for this tag.
+          </p>
+        )}
+      </div>
     </div>
   );
 }

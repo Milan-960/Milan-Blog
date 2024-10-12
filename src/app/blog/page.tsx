@@ -56,6 +56,7 @@ export default function BlogPage() {
               >
                 {post.title}
               </Link>
+
               <p className="dark:text-white text-black mt-2">
                 {post.description}
               </p>
