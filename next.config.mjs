@@ -16,6 +16,14 @@ const bundleAnalyzerConfig = withBundleAnalyzer({
 });
 
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**", // Allow images from any domain
+      },
+    ],
+  },
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   webpack: (config, {}) => {
     config.module.rules.push({

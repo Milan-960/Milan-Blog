@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { customLoader } from "@/utils";
 
 type CardProps = {
   title: string;
@@ -32,6 +33,7 @@ export default function Card({
       {/* Image */}
       <div className="relative w-full h-48">
         <Image
+          loader={customLoader}
           src={image}
           alt={title}
           layout="fill"

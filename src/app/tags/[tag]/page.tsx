@@ -1,4 +1,3 @@
-// apps/tags/[tag]/page.tsx
 import { getAllPosts } from "@/utils/getAllPosts";
 import Link from "next/link";
 
@@ -7,6 +6,23 @@ type TagPageProps = {
     tag: string;
   };
 };
+
+// This is for the tag metadata
+export async function generateMetadata({ params }: TagPageProps) {
+  const { tag } = params;
+  const allPosts = getAllPosts();
+  const filteredPosts = allPosts.filter((post) => post.tags.includes(tag));
+
+  const description =
+    filteredPosts.length > 0
+      ? `Posts tagged with ${tag} on Milan's Blog.`
+      : `No posts found for the tag ${tag}.`;
+
+  return {
+    title: `Posts tagged with ${tag} - Milan's Blog`,
+    description,
+  };
+}
 
 export default function TagPage({ params }: TagPageProps) {
   const { tag } = params;
