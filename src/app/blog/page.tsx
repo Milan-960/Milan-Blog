@@ -66,7 +66,7 @@ export default function BlogPage() {
                     key={index}
                     className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs"
                   >
-                    {tag}
+                    #{tag}
                   </span>
                 ))}
               </div>

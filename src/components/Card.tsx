@@ -47,7 +47,7 @@ export default function Card({
         {/* Title */}
         <Link
           href={`/blog/${slug}`}
-          className="text-2xl font-bold text-gray-900 dark:text-white hover:underline"
+          className="text-2xl font-bold text-blue-600  hover:underline"
         >
           {title}
         </Link>
@@ -63,7 +63,7 @@ export default function Card({
               href={`/tags/${tag}`}
               className="inline-block bg-blue-100 text-blue-600 px-3 py-1 text-sm font-semibold rounded-full hover:underline hover:cursor-pointer"
             >
-              {tag}
+              #{tag}
             </Link>
           ))}
         </div>

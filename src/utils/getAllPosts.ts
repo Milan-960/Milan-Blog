@@ -28,11 +28,16 @@ export function getAllPosts(): PostMeta[] {
       try {
         const { data } = matter(fileContent);
 
+        // Strip the '#' from tags for URL purposes but keep them for display
+        const cleanTags = (data.tags || []).map((tag: string) =>
+          tag.startsWith("#") ? tag.substring(1) : tag
+        );
+
         return {
           slug: filename.replace(".mdx", ""),
           title: data.title,
           description: data.description,
-          tags: data.tags || [],
+          tags: cleanTags, // use cleaned tags here
           img: data.img || "/images/default-blog.webp",
         };
       } catch (error) {
