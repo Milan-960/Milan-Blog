@@ -1,5 +1,3 @@
-// src/app/about/page.tsx
-
 import AboutMePage from "@/pages/AboutMePage/AboutMePage";
 import { getMetadata } from "@/utils/getMetadata";
 

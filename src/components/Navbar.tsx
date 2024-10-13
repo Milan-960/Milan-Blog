@@ -51,7 +51,7 @@ const Navbar = () => {
                   href={link.href}
                   className={`block font-medium ${
                     isActive
-                      ? "text-blue-600 dark:text-blue-400 underline" // Active route styles
+                      ? "text-blue-600 dark:text-blue-400" // Active route styles
                       : "text-gray-900 hover:text-blue-600 hover:underline dark:text-gray-100 dark:hover:text-blue-400"
                   }`}
                 >

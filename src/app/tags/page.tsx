@@ -1,4 +1,3 @@
-// apps/tags/page.tsx
 import Link from "next/link";
 import { getAllTags } from "@/utils/getAllPosts";
 import { getMetadata } from "@/utils/getMetadata";

@@ -1,4 +1,3 @@
-// src/app/blog/page.tsx
 import Link from "next/link";
 import { getAllPosts, PostMeta } from "@/utils/getAllPosts";
 import { getMetadata } from "@/utils/getMetadata";
